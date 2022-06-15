@@ -5,8 +5,8 @@ import styles from "./styles.module.css";
 
 const Signup = () => {
 	const [data, setData] = useState({
-// 		firstName: "",
-// 		lastName: "",
+		// firstName: "",
+		// lastName: "",
 		email: "",
 		password: "",
 	});
@@ -40,32 +40,47 @@ const Signup = () => {
 				<div className={styles.left}>
 					<h1>Welcome Back</h1>
 					<Link to="/login">
-						<button type="button" className={styles.white_btn}>
+						<button type="submit" className={styles.white_btn}>
 							Sign in
 						</button>
 					</Link>
 				</div>
 				<div className={styles.right}>
+				<Link to="/signupadmin">
+					<button type ="button" className={styles.green_btn}>
+						Admin Signup
+					</button>
+					</Link>
+					<Link to="/signupsme">
+					<button type ="button" className={styles.green_btn}>
+						SME Signup
+					</button>
+					</Link>
+					<Link to="/signup">
+					<button type ="button" className={styles.green_btn}>
+						User Signup
+					</button>
+					</Link>
 					<form className={styles.form_container} onSubmit={handleSubmit}>
 						<h1>Create Account</h1>
-// 						<input
-// 							type="text"
-// 							placeholder="First Name"
-// 							name="firstName"
-// 							onChange={handleChange}
-// 							value={data.firstName}
-// 							required
-// 							className={styles.input}
-// 						/>
-// 						<input
-// 							type="text"
-// 							placeholder="Last Name"
-// 							name="lastName"
-// 							onChange={handleChange}
-// 							value={data.lastName}
-// 							required
-// 							className={styles.input}
-// 						/>
+						{/* <input
+							type="text"
+							placeholder="First Name"
+							name="firstName"
+							onChange={handleChange}
+							value={data.firstName}
+							required
+							className={styles.input}
+						/>
+						<input
+							type="text"
+							placeholder="Last Name"
+							name="lastName"
+							onChange={handleChange}
+							value={data.lastName}
+							required
+							className={styles.input}
+						/> */}
 						<input
 							type="email"
 							placeholder="Email"
