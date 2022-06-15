@@ -1,6 +1,8 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import Main from "./components/Main";
 import Signup from "./components/Singup";
+import Signupadmin from "./components/Singup admin";
+import Signupsme from "./components/Singup sme";
 import Login from "./components/Login";
 import EmailVerify from "./components/EmailVerify";
 import ForgotPassword from "./components/ForgotPassword";
@@ -13,6 +15,10 @@ function App() {
 		<Routes>
 			{user && <Route path="/" exact element={<Main />} />}
 			<Route path="/signup" exact element={<Signup />} />
+			<Route path="/signupsme" exact element={<Signupsme />} />
+
+			<Route path="/signupadmin" exact element={<Signupadmin />} />
+
 			<Route path="/login" exact element={<Login />} />
 			<Route path="/" element={<Navigate replace to="/login" />} />
 			<Route path="/users/:id/verify/:token" element={<EmailVerify />} />
