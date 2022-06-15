@@ -5,8 +5,8 @@ import styles from "./styles.module.css";
 
 const Signup = () => {
 	const [data, setData] = useState({
-		firstName: "",
-		lastName: "",
+// 		firstName: "",
+// 		lastName: "",
 		email: "",
 		password: "",
 	});
